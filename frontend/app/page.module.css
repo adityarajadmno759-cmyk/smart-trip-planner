@@ -1,0 +1,383 @@
+.page {
+    min-height: 100vh;
+}
+
+.hero {
+    padding: 48px 24px 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.heroContent {
+    max-width: 600px;
+}
+
+.heroBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: 999px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--brand-primary);
+    margin-bottom: 16px;
+    animation: fadeInUp 0.5s ease;
+}
+
+.heroTitle {
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.15;
+    margin-bottom: 12px;
+    animation: fadeInUp 0.5s ease 0.1s both;
+}
+
+.heroSubtitle {
+    font-size: 16px;
+    color: var(--text-secondary);
+    animation: fadeInUp 0.5s ease 0.2s both;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 24px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px 40px;
+    align-items: start;
+}
+
+/* Control Panel */
+.controlPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.sectionTitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.inputStack {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.locationInput {
+    position: relative;
+}
+
+.detectBtn {
+    flex-shrink: 0;
+    background: rgba(108, 99, 255, 0.15);
+    border: 1px solid rgba(108, 99, 255, 0.3);
+    border-radius: var(--radius-sm);
+    color: var(--brand-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+    cursor: pointer;
+    white-space: nowrap;
+    height: 44px;
+}
+
+.detectBtn:hover {
+    background: rgba(108, 99, 255, 0.25);
+}
+
+.detectBtn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.modeSection {
+    margin-bottom: 20px;
+}
+
+.modeLabel {
+    font-size: 13px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.modeGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.modeBtn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 6px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.modeBtn:hover {
+    background: var(--bg-glass-hover);
+    color: var(--text-primary);
+}
+
+.modeBtn span:first-child {
+    font-size: 20px;
+}
+
+.modeBtnActive {
+    background: rgba(var(--mode-color, 108, 99, 255), 0.15) !important;
+    border-color: var(--mode-color, var(--brand-primary)) !important;
+    color: white !important;
+}
+
+/* Pollution */
+.pollutionCard {
+    animation: fadeInUp 0.4s ease;
+}
+
+.cardTitle {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.aqiMain {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.aqiScore {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1;
+}
+
+.aqiCategory {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.aqiPoints {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.aqiPoint {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-sm);
+}
+
+.aqiPointLabel {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.aqiPointValue {
+    font-size: 13px;
+    font-weight: 700;
+}
+
+/* Right Panel */
+.rightPanel {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.mapWrapper {
+    position: relative;
+    height: 420px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+}
+
+.map {
+    width: 100%;
+    height: 100%;
+}
+
+.mapPlaceholder {
+    width: 100%;
+    height: 100%;
+    background: var(--bg-card);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mapPlaceholderInner {
+    text-align: center;
+    max-width: 340px;
+}
+
+.mapPlaceholderInner h3 {
+    font-size: 18px;
+    margin: 12px 0 8px;
+}
+
+.mapPlaceholderInner p {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.mapPlaceholderInner code {
+    background: var(--bg-glass);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 12px;
+    color: var(--brand-secondary);
+}
+
+/* Route Cards */
+.routeCards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.routeCardsTitle {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.routeCardSkeleton {
+    height: 110px;
+}
+
+.routeCard {
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+    animation: fadeInUp 0.3s ease both;
+}
+
+.routeCard:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-default);
+    transform: translateY(-2px);
+}
+
+.routeCardSelected {
+    border-color: var(--route-color, var(--brand-primary)) !important;
+    background: var(--bg-card-hover);
+    box-shadow: 0 2px 16px rgba(108, 99, 255, 0.2);
+}
+
+.routeCardHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px;
+}
+
+.routeMode {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.routeModeLabel {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.routeSummary {
+    font-size: 12px;
+    color: var(--text-muted);
+}
+
+.routeBadges {
+    display: flex;
+    gap: 6px;
+}
+
+.routeStats {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.routeStat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+}
+
+.routeStatIcon {
+    font-size: 18px;
+}
+
+.routeStatValue {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.routeStatLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+}
+
+.routeWarning {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--brand-warning);
+    padding: 6px 10px;
+    background: rgba(255, 209, 102, 0.1);
+    border-radius: var(--radius-sm);
+}
+
+@media (max-width: 1024px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .mapWrapper {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .modeGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .routeStats {
+        gap: 12px;
+    }
+}

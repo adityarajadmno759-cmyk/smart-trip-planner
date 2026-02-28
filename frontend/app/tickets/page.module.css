@@ -1,0 +1,234 @@
+.page {
+    padding: 32px 0 60px;
+}
+
+.pageHeader {
+    margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 6px;
+}
+
+.searchCard {
+    margin-bottom: 28px;
+}
+
+.searchRow {
+    display: flex;
+    gap: 12px;
+}
+
+.placesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.placeCard {
+    overflow: hidden;
+    animation: fadeInUp 0.3s ease both;
+}
+
+.placeImage {
+    height: 120px;
+    background: var(--gradient-brand-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.topBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.placeBody {
+    padding: 16px;
+}
+
+.placeName {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.placeAddress {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.placeRating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 8px;
+}
+
+.placeDesc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.placeQueue {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--text-secondary);
+    padding: 6px 0;
+    border-top: 1px solid var(--border-subtle);
+}
+
+.emptyState {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.emptyState h3 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+}
+
+.emptyState p {
+    color: var(--text-secondary);
+}
+
+/* Modal */
+.modalOverlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fadeIn 0.2s ease;
+}
+
+.modal {
+    background: var(--bg-card);
+    border: 1px solid var(--border-default);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    animation: fadeInUp 0.3s ease;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.modalClose {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-subtle);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.modalClose:hover {
+    background: var(--bg-glass-hover);
+    color: var(--text-primary);
+}
+
+.modalTitle {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+.modalPlace {
+    color: var(--text-secondary);
+    font-size: 14px;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.modalGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 16px;
+}
+
+.priceSummary {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 24px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    align-items: center;
+}
+
+.priceSummary span {
+    color: var(--text-secondary);
+}
+
+.queueInfo {
+    font-size: 13px;
+    color: var(--brand-warning);
+    margin-bottom: 16px;
+}
+
+.bookSuccess {
+    text-align: center;
+}
+
+.bookSuccess h2 {
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+.bookSummaryGrid {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 24px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin: 20px 0 0;
+    font-size: 14px;
+    text-align: left;
+    align-items: center;
+}
+
+.bookSummaryGrid span {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    .searchRow {
+        flex-direction: column;
+    }
+
+    .placesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .modalGrid {
+        grid-template-columns: 1fr;
+    }
+}

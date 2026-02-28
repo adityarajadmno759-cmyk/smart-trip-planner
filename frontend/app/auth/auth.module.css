@@ -1,0 +1,79 @@
+.authPage {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.authCard {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 40px;
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 0.4s ease;
+}
+
+.authHeader {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.authLogo {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+}
+
+.authTitle {
+    font-size: 24px;
+    margin-bottom: 6px;
+}
+
+.googleBtn {
+    gap: 10px;
+    margin-bottom: 4px;
+}
+
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border-subtle);
+}
+
+.authForm {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.authFooter {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+@media (max-width: 480px) {
+    .authCard {
+        padding: 28px 24px;
+    }
+}

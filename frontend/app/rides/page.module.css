@@ -1,0 +1,196 @@
+.page {
+    padding: 32px 0 60px;
+}
+
+.pageHeader {
+    margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 6px;
+}
+
+.sectionTitle {
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.tabContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.searchCard {}
+
+.inputPair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.vehicleGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+}
+
+.vehicleCard {
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.vehicleCard:hover {
+    transform: translateY(-4px);
+}
+
+.vehicleCardSelected {
+    border-color: var(--brand-primary) !important;
+    background: rgba(108, 99, 255, 0.1) !important;
+}
+
+.vehicleEmoji {
+    font-size: 36px;
+    margin-bottom: 8px;
+}
+
+.vehicleLabel {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.vehicleSeats {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.vehicleFare {
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--brand-secondary);
+    margin-bottom: 4px;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.vehicleEta {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.vehicleDist {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+}
+
+.bookingPanel {
+    animation: fadeInUp 0.3s ease;
+}
+
+.bookingSummary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.bookingSummary>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-sm);
+}
+
+.bookingSummary>div>span {
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.bookingSummary>div>strong {
+    font-size: 13px;
+    color: var(--text-primary);
+}
+
+.confirmCard {
+    text-align: center;
+    animation: fadeInUp 0.4s ease;
+}
+
+.confirmCard h3 {
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.confirmIcon {
+    font-size: 48px;
+}
+
+/* Rentals */
+.rentalCats {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.rentalForm {
+    margin-bottom: 0;
+}
+
+.rentalFormGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.rentalCard {
+    padding: 20px;
+    text-align: center;
+}
+
+.unavailable {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.rentalPricing {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 10px;
+}
+
+.rentalPrice {
+    font-size: 18px;
+    font-weight: 900;
+    color: var(--brand-secondary);
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+.rentalPriceLabel {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-left: 2px;
+}
+
+@media (max-width: 600px) {
+    .inputPair {
+        grid-template-columns: 1fr;
+    }
+
+    .rentalFormGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .vehicleGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

@@ -1,0 +1,270 @@
+.page {
+    padding: 32px 0 60px;
+}
+
+.pageHeader {
+    margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 6px;
+}
+
+.sectionTitle {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.mainGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.leftCol,
+.rightCol {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.locationDisplay {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    margin-bottom: 16px;
+}
+
+.trackingDot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--text-muted);
+    flex-shrink: 0;
+}
+
+.trackingDotActive {
+    background: var(--brand-secondary);
+    box-shadow: 0 0 0 4px rgba(0, 217, 165, 0.2);
+    animation: sos-pulse 2s infinite;
+}
+
+.coordsText {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: monospace;
+    color: var(--text-primary);
+}
+
+.accuracyText {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 3px;
+}
+
+.locationPlaceholder {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.trackingButtons {
+    display: flex;
+    gap: 10px;
+}
+
+/* SOS */
+.sosCard {
+    text-align: center;
+}
+
+.sosButton {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #FF4757, #C0392B);
+    border: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 900;
+    font-family: 'Space Grotesk', sans-serif;
+    cursor: pointer;
+    margin: 0 auto 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 4px;
+    animation: sos-pulse 2.5s infinite;
+    box-shadow: 0 8px 32px rgba(255, 71, 87, 0.4);
+    transition: transform 0.2s;
+}
+
+.sosButton:hover {
+    transform: scale(1.05);
+}
+
+.sosButton:active {
+    transform: scale(0.97);
+}
+
+.sosButton:disabled {
+    opacity: 0.7;
+    animation: none;
+}
+
+.sosLoading {
+    animation: spin 1s linear infinite !important;
+}
+
+.sosHint {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.sosResult {
+    background: rgba(0, 217, 165, 0.1);
+    border: 1px solid rgba(0, 217, 165, 0.3);
+    border-radius: var(--radius-md);
+    padding: 16px;
+    text-align: left;
+    animation: fadeInUp 0.3s ease;
+}
+
+.sosResultHeader {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--brand-secondary);
+    margin-bottom: 10px;
+}
+
+.sosResultBody {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sosResultBody>div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.sosResultBody span {
+    color: var(--text-muted);
+}
+
+/* Contacts */
+.contactsHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.contactsHeader .sectionTitle {
+    margin-bottom: 0;
+}
+
+.loginPrompt {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.loginPrompt p {
+    margin-top: 8px;
+}
+
+.addContactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding: 16px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-md);
+}
+
+.contactCard {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.contactCard:last-child {
+    border-bottom: none;
+}
+
+.contactAvatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    color: white;
+    flex-shrink: 0;
+}
+
+.contactInfo {
+    flex: 1;
+}
+
+.contactName {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contactPhone {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-top: 2px;
+}
+
+/* Tips */
+.tipsGrid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 10px 12px;
+    background: var(--bg-glass);
+    border-radius: var(--radius-sm);
+}
+
+.tipIcon {
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.tipText {
+    font-size: 13px;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .mainGrid {
+        grid-template-columns: 1fr;
+    }
+}

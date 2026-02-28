@@ -1,0 +1,146 @@
+.page {
+    padding: 32px 0 60px;
+}
+
+.pageHeader {
+    margin-bottom: 28px;
+}
+
+.pageHeader h1 {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    margin-bottom: 6px;
+}
+
+.searchCard {
+    margin-bottom: 28px;
+}
+
+.searchRow {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.searchInputWrap {
+    flex: 1;
+    min-width: 240px;
+}
+
+.filterRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.resultCount {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 16px;
+}
+
+.hotelGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.hotelCard {
+    overflow: hidden;
+    animation: fadeInUp 0.3s ease both;
+}
+
+.hotelImagePlaceholder {
+    height: 160px;
+    background: var(--gradient-brand-soft);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-bottom: 1px solid var(--border-subtle);
+}
+
+.openBadge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.hotelBody {
+    padding: 16px;
+}
+
+.hotelName {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    line-height: 1.3;
+}
+
+.hotelAddress {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+}
+
+.hotelRating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.ratingText {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
+
+.hotelDesc {
+    font-size: 12px;
+    color: var(--text-muted);
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.hotelFooter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 12px;
+}
+
+.hotelPrice {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--brand-secondary);
+}
+
+.hotelActions {
+    display: flex;
+    gap: 8px;
+}
+
+.emptyState {
+    text-align: center;
+    padding: 80px 24px;
+}
+
+.emptyState h3 {
+    font-size: 20px;
+    margin: 16px 0 8px;
+}
+
+.emptyState p {
+    color: var(--text-secondary);
+}
+
+@media (max-width: 600px) {
+    .searchRow {
+        flex-direction: column;
+    }
+
+    .hotelGrid {
+        grid-template-columns: 1fr;
+    }
+}
